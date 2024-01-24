@@ -47,12 +47,26 @@ DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://MC:MC@mc.cuunzit.mongo
 DATABASE_NAME = environ.get('DATABASE_NAME', "Piri")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'FILES')
 
+FILE_CHANNEL = int(environ.get('FILE_CHANNEL', '-1001616308548'))
+FILE_CHANNEL_LINK = environ.get('FILE_CHANNEL_LINK', 'https://t.me/TGxMULTIBOTDB')
+
+# This is required for the plugins involving the file system.
+TMP_DOWNLOAD_DIRECTORY = environ.get("TMP_DOWNLOAD_DIRECTORY", "./DOWNLOADS/")
+
+# Command
+COMMAND_HAND_LER = environ.get("COMMAND_HAND_LER", "/")
+
+#Downloader
+DOWNLOAD_LOCATION = environ.get("DOWNLOAD_LOCATION", "./DOWNLOADS/AudioBoT/")
+
 # Others
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
 MAX_B_TN = environ.get("MAX_B_TN", "10")
 MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', -1001511281873))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'Mc_group_films')
+GRP_LNK = environ.get('GRP_LNK', 'https://t.me/NasraniSeries')
+CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/bigmoviesworld')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), False)
 IMDB = is_enabled((environ.get('IMDB', "False")), True)
 AUTO_FFILTER = is_enabled((environ.get('AUTO_FFILTER', "True")), True)
